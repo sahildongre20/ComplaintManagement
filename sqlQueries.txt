@@ -1,0 +1,17 @@
+CREATE TABLE [dbo].[user_data]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY , 
+	[fname] varchar(50) NOT NULL , 
+	[lname] varchar(50) NOT NULL, 
+    [email] VARCHAR(150) NULL, 
+    [mobile] NUMERIC(10) NULL, 
+    [dob] DATE NULL, 
+    [addr] VARCHAR(250) NULL, 
+    [city] VARCHAR(50) NULL, 
+    [pin] NUMERIC(6) NULL, 
+    [pass] VARCHAR(50) NULL , 
+
+
+)
+
+

@@ -25,8 +25,10 @@
         <div class="login-box">
             <h2>Login</h2>
             <asp:TextBox ID="username"  placeholder="Enter Username" runat="server"></asp:TextBox><br><br>
-            <asp:TextBox ID="txtpass"  placeholder="Enter Password" runat="server" TextMode="Password"></asp:TextBox><br><br>
-            <asp:Button ID="blogin" runat="server" Text="Login"   /><br><br>
+            <asp:TextBox ID="txtpass"  placeholder="Enter Password" runat="server" TextMode="Password"></asp:TextBox><br>
+            <asp:Label ID="errormsg" runat="server" ForeColor="Red"></asp:Label><br>
+            <asp:Button ID="blogin" runat="server" Text="Login" onclick="blogin_Click"   /><br><br>
+            <asp:label ID="successmsg" runat="server"></asp:label>
             <h2>Not Registered ? <a href="register.aspx">Register</a> </h2>
             <h2>Can't  Remember Password ? <a href="#">Forgot Password</a> </h2>
 

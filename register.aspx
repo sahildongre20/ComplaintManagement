@@ -27,29 +27,32 @@
 
             <br/><br/>            
             <h2>Register</h2>
-            <asp:TextBox placeholder="First Name" runat="server"></asp:TextBox>
-            <asp:TextBox placeholder="Last Name" runat="server"></asp:TextBox>
+            <asp:TextBox placeholder="First Name" runat="server" ID="fname"></asp:TextBox>
+            <asp:TextBox placeholder="Last Name" runat="server" ID="lname"></asp:TextBox>
             <br/><br/>
-            <asp:TextBox placeholder="Email" runat="server"  TextMode="Email"></asp:TextBox>  
-            <asp:TextBox placeholder="Phone Number" runat="server"  TextMode="Number"></asp:TextBox>  
+            <asp:TextBox placeholder="Email" runat="server"  TextMode="Email" ID="email"></asp:TextBox>  
+            <asp:TextBox placeholder="Phone Number" runat="server"  TextMode="Number" ID="mobile"></asp:TextBox>  
 
             <br/><br/>
-            <asp:TextBox placeholder="Date Of Birth" runat="server" TextMode="Date"></asp:TextBox>
+        
+            <asp:TextBox placeholder="Date Of Birth" runat="server" TextMode="Date" ID="dob"></asp:TextBox>
             <br /><br />
-            <asp:TextBox placeholder="Address" runat="server" TextMode="MultiLine"></asp:TextBox>
+            <asp:TextBox placeholder="Address" runat="server" TextMode="MultiLine" ID="addr"></asp:TextBox>
             <br /><br />            
-            <asp:TextBox placeholder="City" runat="server"></asp:TextBox>
-            <asp:TextBox placeholder="Pin Code" runat="server" TextMode="Number"></asp:TextBox>
+            <asp:TextBox placeholder="City" runat="server" ID="city"></asp:TextBox>
+            <asp:TextBox placeholder="Pin Code" runat="server" TextMode="Number" ID="pin"></asp:TextBox>
             <br /><br />                        
-            <asp:TextBox   placeholder="Password" runat="server" TextMode="Password"></asp:TextBox>            
-            <asp:TextBox   placeholder="Confirm Password" runat="server" TextMode="Password"></asp:TextBox>
+            <asp:TextBox   placeholder="Password" runat="server" TextMode="Password" ID="pass"></asp:TextBox>            
+            <asp:TextBox   placeholder="Confirm Password" runat="server" TextMode="Password" ID="cpass"></asp:TextBox>
             <br /><br />
-            <asp:Button  runat="server" Text="Register"  />
-            <br /><br />
+            <asp:Button  runat="server" Text="Register" Onclick="Register_Click"  />
+            <br />
+            <asp:Label ID="errormsg" runat="server" ForeColor="Red"></asp:Label><br />
             <h2>Already Registered ? <a href="login.aspx">Login</a> </h2>
+            <asp:Label runat="server" ID="successmsg"></asp:Label>
 
 
-            
+            <asp:HiddenField runat="server" ID="hfuserid" />
             
         </div>
     </main>

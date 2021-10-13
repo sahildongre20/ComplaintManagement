@@ -42,6 +42,15 @@ namespace ComplaintManagement
         protected global::System.Web.UI.WebControls.TextBox txtpass;
 
         /// <summary>
+        /// errormsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label errormsg;
+
+        /// <summary>
         /// blogin control.
         /// </summary>
         /// <remarks>
@@ -49,5 +58,14 @@ namespace ComplaintManagement
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button blogin;
+
+        /// <summary>
+        /// successmsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label successmsg;
     }
 }

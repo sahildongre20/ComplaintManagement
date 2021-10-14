@@ -26,6 +26,11 @@ namespace ComplaintManagement
             {
                 errormsg.Text = "<p>All fields are Mandatory</p>";
             }
+            else if (pass.Text.Length <8)
+            {
+                errormsg.Text = "<p>Password Must be of atleast 8 characters";
+
+            }
             else if (cpass.Text != pass.Text)
             {
                 
@@ -33,8 +38,14 @@ namespace ComplaintManagement
 
             }
 
+            
+
             else
             {
+
+
+
+                string EncryptedPass = Encrypt(pass.Text.Trim());
 
 
                 using (SqlConnection sqlconn = new SqlConnection(con))
@@ -51,7 +62,7 @@ namespace ComplaintManagement
                     add.Parameters.AddWithValue("@addr", addr.Text.Trim());
                     add.Parameters.AddWithValue("@city", city.Text.Trim());
                     add.Parameters.AddWithValue("@pin", pin.Text.Trim());
-                    add.Parameters.AddWithValue("@pass", pass.Text.Trim());
+                    add.Parameters.AddWithValue("@pass", EncryptedPass);
 
 
 
@@ -70,6 +81,14 @@ namespace ComplaintManagement
             {
                 fname.Text = lname.Text = email.Text = mobile.Text = dob.Text = addr.Text
                     = city.Text = pin.Text = pass.Text = hfuserid.Value = cpass.Text = "";
+            }
+
+            string Encrypt(String str)
+            {
+                byte[] b = System.Text.Encoding.ASCII.GetBytes(str);
+                string enc = Convert.ToBase64String(b);
+                return enc;
+
             }
         }
     }

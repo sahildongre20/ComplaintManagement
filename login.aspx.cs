@@ -21,38 +21,58 @@ namespace ComplaintManagement
 
         protected void blogin_Click(object sender, EventArgs e)
         {
-            String id=null;
-            using (SqlConnection myConnection = new SqlConnection(con))
+            if (username.Text == "")
             {
-                string oString = "Select Id  from dbo.user_data where email=@email and pass=@pass";
-                SqlCommand oCmd = new SqlCommand(oString, myConnection);
-                oCmd.Parameters.AddWithValue("@email", username.Text);
-                oCmd.Parameters.AddWithValue("@pass", txtpass.Text);
-                myConnection.Open();
-                using (SqlDataReader oReader = oCmd.ExecuteReader()) 
-                {
-                    while (oReader.Read())
-                    {
-
-                        id = oReader["Id"].ToString();
-                    }
-
-                    myConnection.Close();
-                }
+                errormsg.Text = "<p>Please Enter Email";
             }
-
-            if (id != null)
+            else if (txtpass.Text == "")
             {
-                errormsg.Visible = false;
-                successmsg.Text = "<p>Succesfull login</p>";
+                errormsg.Text = "<p>Please Enter Password";
             }
             else
             {
-              
-                errormsg.Text = "<p>Username or password Incorrect</p>";
-                
-                errormsg.Visible = true;
+                String id = null;
+                String encryptedPass = Encrypt(txtpass.Text.Trim());
+                using (SqlConnection myConnection = new SqlConnection(con))
+                {
+                    string oString = "Select Id  from dbo.user_data where email=@email and pass=@pass";
+                    SqlCommand oCmd = new SqlCommand(oString, myConnection);
+                    oCmd.Parameters.AddWithValue("@email", username.Text);
+                    oCmd.Parameters.AddWithValue("@pass", encryptedPass);
+                    myConnection.Open();
+                    using (SqlDataReader oReader = oCmd.ExecuteReader())
+                    {
+                        while (oReader.Read())
+                        {
+
+                            id = oReader["Id"].ToString();
+                        }
+
+                        myConnection.Close();
+                    }
+                }
+
+                if (id != null)
+                {
+                    errormsg.Visible = false;
+                    successmsg.Text = "<p>Succesfull login</p>";
+                }
+                else
+                {
+
+                    errormsg.Text = "<p>Username or password Incorrect</p>";
+
+                    errormsg.Visible = true;
+                }
             }
+        }
+
+        string Encrypt(String str)
+        {
+            byte[] b = System.Text.ASCIIEncoding.ASCII.GetBytes(str);
+            string enc = Convert.ToBase64String(b);
+            return enc;
+
         }
     }
 }

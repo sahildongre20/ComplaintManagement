@@ -15,3 +15,23 @@ CREATE TABLE [dbo].[user_data]
 )
 
 
+//create procedure for db register
+
+CREATE PROC regUser
+    @Id    INT   ,       
+    @fname  VARCHAR(50) , 
+    @lname  VARCHAR(50) ,
+    @email  VARCHAR(150),
+    @mobile NUMERIC(10)  ,
+    @dob    DATE          ,
+    @addr   VARCHAR(250),
+    @city   VARCHAR(50) ,
+    @pin    NUMERIC(6)   ,
+    @pass   VARCHAR(50)
+    AS
+
+    if @id = 0
+    begin 
+    insert into dbo.user_data(fname , lname , email , mobile , dob , addr , city , pin , pass)
+    values(@fname , @lname , @email , @mobile , @dob , @addr , @city , @pin , @pass)
+    end

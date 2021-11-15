@@ -1,0 +1,136 @@
+html,body{
+    margin: 0;
+}
+
+.sidebar{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 15%;
+    height: 100%;
+    background-color: #F3F1F5;
+    border: 1px solid black;
+    float: left;
+    flex-direction: column;
+    position: fixed;
+
+}
+.cms-lable{
+    width: 100%;
+    padding: 5px 0;
+    background-color:bisque;
+
+}
+.user-name-display{
+    width: 100%;
+    padding: 5px 0;
+    background-color: hotpink;
+}
+.side-bar-btn{
+    width: 100%;
+    height: 10%;
+    border: 1px solid black;
+    background-color: aqua;
+}
+.headbar{
+    width: 84%;
+    margin-left: 15%;
+    background-color: #F3F1F5;
+    height: 60px;
+    border: 1px solid black;
+    float: left;
+}
+.card-container{
+    width: 84%;
+    margin-left: 15%;
+    padding: 50px 0;
+    justify-content:space-around;
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+    background-color: aliceblue;
+    border-bottom: 2px solid black;
+}
+.cards{
+    height: 150px;
+    width: 200px;
+    background-color:aqua;
+
+}
+
+.table-box{
+    width: 84%;
+    height: 700px;
+    margin-left: 15%;
+    float: left;
+    background-color:#F3F1F5;
+}
+.table-card{
+   width: 90%;
+   margin: 20px auto;
+   height: 80%;
+   background-color:aliceblue;
+   border: 2px solid black;
+}
+.table-box h2{
+    padding-left: 20px;
+}
+h2{
+    padding: 20px;
+}
+.side-bar-btn h3{
+    text-align: center;
+}
+.side-bar-btn a{
+    text-decoration: none;
+}
+.complaint-conatiner{
+    width: 84%;
+    margin-left: 15%;
+    float: left;
+    background-color:#F3F1F5;
+}
+.complaint-card{
+    width: 90%;
+    background-color:aqua;
+    height: 600px;
+    margin: 30px auto;
+}
+.complaint-card-img{
+    background-color: aquamarine;
+    width: 50%;
+    height: 100%;
+    border: 2px solid black;
+    float: left;
+    box-sizing:border-box;
+    float: left;
+
+}
+.complaint-card-form{
+    background-color:cyan;
+    width: 50%;
+    height: 100%;
+    border: 2px solid black;
+    float: left;
+    box-sizing:border-box;
+
+}
+.user-profile-card{
+    width: 20%;
+    background-color:aqua;
+    padding: 30px 20px;
+    margin: 50px auto;
+    text-align: center;
+}
+.user-avatar{
+    width: 60%;
+    margin: 10px auto;
+    padding: 20px;
+    height: 120px;
+    background-color: black;
+}
+.edit-profile-btn,.Change-password-btn{
+   margin: 20px 45% ;
+}

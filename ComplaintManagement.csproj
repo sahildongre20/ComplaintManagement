@@ -91,6 +91,10 @@
     <Content Include="index.aspx" />
     <Content Include="login.aspx" />
     <Content Include="register.aspx" />
+    <Content Include="user-add-complaint.aspx" />
+    <Content Include="user-dashboard.aspx" />
+    <Content Include="user-edit-profile.aspx" />
+    <Content Include="user-history.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -115,6 +119,34 @@
     </Compile>
     <Compile Include="register.aspx.designer.cs">
       <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user-add-complaint.aspx.cs">
+      <DependentUpon>user-add-complaint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user-add-complaint.aspx.designer.cs">
+      <DependentUpon>user-add-complaint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user-dashboard.aspx.cs">
+      <DependentUpon>user-dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user-dashboard.aspx.designer.cs">
+      <DependentUpon>user-dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user-edit-profile.aspx.cs">
+      <DependentUpon>user-edit-profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user-edit-profile.aspx.designer.cs">
+      <DependentUpon>user-edit-profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user-history.aspx.cs">
+      <DependentUpon>user-history.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user-history.aspx.designer.cs">
+      <DependentUpon>user-history.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

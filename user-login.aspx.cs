@@ -56,6 +56,10 @@ namespace ComplaintManagement
                 {
                     errormsg.Visible = false;
                     successmsg.Text = "<p>Succesfull login</p>";
+                    string current_user = username.Text;
+                    Session["logged_user"] = current_user;
+                    Response.Redirect("https://localhost:44316/user-dashboard.aspx");
+
                 }
                 else
                 {

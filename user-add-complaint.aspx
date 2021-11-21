@@ -19,7 +19,7 @@
         <div>
         <div class="sidebar">
             <div class="cms-lable"><h2>Complaint Management System</h2></div>
-            <div class="user-name-display"><h2>Welcome @User-Name </h2></div>
+            <div class="user-name-display"><h2>Welcome <asp:Label runat="server" ID="lbl_user_name"></asp:Label> </h2></div>
             <div class="side-bar-btn"><h3> <a href="user-dashboard.aspx"> Dashboard </a></h3></div>
             <div class="side-bar-btn"><h3> <a href="user-add-complaint.aspx">Add Complent </a></h3></div>
             <div class="side-bar-btn"><h3> <a href="user-history.aspx"> History </a></h3></div>
@@ -28,6 +28,7 @@
         </div>
         <div class="headbar">
         </div>
+            <asp:HiddenField  runat="server" ID="hfuserid"/>
         
     <div class="complaint-conatiner">
         <h2>Add Complaint</h2>
@@ -35,32 +36,32 @@
             <div class="complaint-card-img"></div>
             <div class="complaint-card-form">
                 <h2>Register</h2>
-            <asp:TextBox placeholder="Complaint title" runat="server" ></asp:TextBox>
+            <asp:TextBox placeholder="Complaint title" runat="server" ID="title" ></asp:TextBox>
             <br/><br/>
-       <asp:DropDownList ID="DropDownList1" runat="server" >  
+       <asp:DropDownList ID="department" runat="server" >  
             <asp:ListItem Value="">Select Department</asp:ListItem>  
-            <asp:ListItem>Water Department </asp:ListItem>  
-            <asp:ListItem>Education Department</asp:ListItem>  
-            <asp:ListItem>Sewage operations</asp:ListItem>  
-            <asp:ListItem>Land Operation</asp:ListItem>  
-            <asp:ListItem>Health Department</asp:ListItem>  
-            <asp:ListItem>Sanitation Department</asp:ListItem>  
-            <asp:ListItem>Food and Supply Department</asp:ListItem>  
+            <asp:ListItem Value="1">Water Department </asp:ListItem>  
+            <asp:ListItem Value="2">Education Department</asp:ListItem>  
+            <asp:ListItem Value="3">Sewage operations</asp:ListItem>  
+            <asp:ListItem Value="4">Land Operation</asp:ListItem>  
+            <asp:ListItem Value="5">Health Department</asp:ListItem>  
+            <asp:ListItem Value="6">Sanitation Department</asp:ListItem>  
+            <asp:ListItem Value="7">Food and Supply Department</asp:ListItem>  
 
         </asp:DropDownList>  
             <br/><br/>
 
-            <asp:TextBox placeholder="Complaint Description" runat="server" TextMode="MultiLine" ></asp:TextBox>
+            <asp:TextBox placeholder="Complaint Description" runat="server" TextMode="MultiLine"  ID="description"></asp:TextBox>
         
             <br /><br />
-            <asp:TextBox placeholder="Address" runat="server" TextMode="MultiLine" ID="addr"></asp:TextBox>
+            <asp:TextBox placeholder="Address" runat="server" TextMode="MultiLine" ID="address"></asp:TextBox>
             <br /><br />            
-            <asp:TextBox placeholder="City" runat="server" ></asp:TextBox>
-            <asp:TextBox placeholder="Pin Code" runat="server" TextMode="Number" ></asp:TextBox>
+            <asp:TextBox placeholder="City" runat="server"  ID="city"></asp:TextBox>
+            <asp:TextBox placeholder="Pin Code" runat="server" TextMode="Number" ID="pincode" ></asp:TextBox>
             <br /><br />   
-            <asp:FileUpload runat="server" ></asp:FileUpload>
+            <asp:FileUpload ID="imgUpload" runat="server" ></asp:FileUpload>
             <br /><br />
-            <asp:Button Text="Add Complaint" runat="server" ></asp:Button>
+            <asp:Button Text="Add Complaint" runat="server"  OnClick="Add_complaint"></asp:Button>
             </div>
         </div>
     </div>

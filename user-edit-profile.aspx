@@ -19,7 +19,7 @@
           <div>
         <div class="sidebar">
            <div class="cms-lable"><h2>Complaint Management System</h2></div>
-            <div class="user-name-display"><h2>Welcome @User-Name </h2></div>
+            <div class="user-name-display"><h2>Welcome <asp:Label runat="server" ID="lbl_user_name"></asp:Label> </h2></div>
             <div class="side-bar-btn"><h3> <a href="user-dashboard.aspx"> Dashboard </a></h3></div>
             <div class="side-bar-btn"><h3> <a href="user-add-complaint.aspx">Add Complent </a></h3></div>
             <div class="side-bar-btn"><h3> <a href="user-history.aspx"> History </a></h3></div>

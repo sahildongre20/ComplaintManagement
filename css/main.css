@@ -1,0 +1,45 @@
+﻿body::before {
+    content: "";
+    display: block;
+    height: 60px;
+    background-color: #0DCAF0;
+}
+
+.navbar {
+    border-radius: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+a:hover, button:hover {
+    opacity: 0.7;
+}
+
+.card  h3{
+    float:none;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.card p{
+    margin-top:-15px;
+}
+
+@media only screen and (max-width: 600px) {
+.main {
+    width:95%;
+    margin: 5px;
+    padding:5px;
+}
+    .input-group{
+        margin: 10px 0;
+    }
+}

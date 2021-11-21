@@ -60,15 +60,6 @@ namespace ComplaintManagement
         protected global::System.Web.UI.WebControls.TextBox mobile;
 
         /// <summary>
-        /// dob control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox dob;
-
-        /// <summary>
         /// addr control.
         /// </summary>
         /// <remarks>
@@ -76,6 +67,15 @@ namespace ComplaintManagement
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox addr;
+
+        /// <summary>
+        /// dob control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox dob;
 
         /// <summary>
         /// city control.

@@ -4,51 +4,111 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Register</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="css/main.css">
+    <title>User Registeration</title>
 </head>
 <body>
     <form id="form1" runat="server">
-       <head>
-        <div class="navbar">
-            <h1>Complent management system</h1>
-            <h3> <a href="index.aspx"> Home</a></h3>
-            <h3> <a href="login.aspx"> Login</a></h3>
-            <h3> <a href="register.aspx"> Register</a></h3>
-            
-        </div>
-    </head>
-    <main>
-        <div class="register-box">
+         <section>
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark  fixed-top btn " >
+            <div class="container">
+                <a href="#" class="navbar-brand  fs-2">LiveDesk</a>
+ 
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+ 
+                <div class="collapse navbar-collapse " id="navmenu">
+                    <ul class="navbar-nav ms-auto">
+                         <li class="nav-item">
+                            <a href="index.aspx" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="login-type.aspx" class="nav-link">Signin</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="register.aspx" class="nav-link">Signup</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about-us.aspx" class="nav-link">About Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <section class=" text-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md col-md-6 ">
+                    <img src="img/signup.svg" alt="" class="img-fluid my-md-5">
+                </div>
+           
+            <div class="col-md  g-5">
+                <div class="card shadow p-3 mb-5 bg-body rounded">
+                        <main>
+        <div class="register-box  ">
 
             <br/><br/>            
             <h2>Register</h2>
-            <asp:TextBox placeholder="First Name" runat="server" ID="fname"></asp:TextBox>
-            <asp:TextBox placeholder="Last Name" runat="server" ID="lname"></asp:TextBox>
-            <br/><br/>
-            <asp:TextBox placeholder="Email" runat="server"  TextMode="Email" ID="email"></asp:TextBox>  
-            <asp:TextBox placeholder="Phone Number" runat="server"  TextMode="Number" ID="mobile"></asp:TextBox>  
-
-            <br/><br/>
-        
-            <asp:TextBox placeholder="Date Of Birth" runat="server" TextMode="Date" ID="dob"></asp:TextBox>
-            <br /><br />
-            <asp:TextBox placeholder="Address" runat="server" TextMode="MultiLine" ID="addr"></asp:TextBox>
-            <br /><br />            
-            <asp:TextBox placeholder="City" runat="server" ID="city"></asp:TextBox>
-            <asp:TextBox placeholder="Pin Code" runat="server" TextMode="Number" ID="pin"></asp:TextBox>
-            <br /><br />                        
-            <asp:TextBox   placeholder="Password" runat="server" TextMode="Password" ID="pass"></asp:TextBox>            
-            <asp:TextBox   placeholder="Confirm Password" runat="server" TextMode="Password" ID="cpass"></asp:TextBox>
-            <br /><br />
-            <asp:Button  runat="server" Text="Register" Onclick="Register_Click"  />
+            <div class="row">
+                <div class="col-md">
+                    <asp:TextBox placeholder="First Name" CssClass="input-group" runat="server" ID="fname"></asp:TextBox>
+                </div>
+                <div class="col-md">
+                    <asp:TextBox placeholder="Last Name" CssClass="input-group" runat="server" ID="lname"></asp:TextBox>
+                 </div>
+            </div>
+            </br>
+            <div class="row">
+                <div class="col-md">
+                    <asp:TextBox placeholder="Email" runat="server"  CssClass="input-group" TextMode="Email" ID="email"></asp:TextBox>  
+                </div>
+                <div class="col-md">                
+                    <asp:TextBox placeholder="Phone Number" runat="server" CssClass="input-group"  TextMode="Number" ID="mobile"></asp:TextBox>  
+                </div>
+                </div>
+            <br/>
+             <div class="row">
+                 <div class="col-md">
+                 <asp:TextBox placeholder="Address" runat="server" CssClass="input-group" TextMode="MultiLine" ID="addr"></asp:TextBox>
+                 </div>
+                <div class="col-md col-4">
+                <asp:TextBox placeholder="Date Of Birth" runat="server" CssClass="input-group" TextMode="Date" ID="dob"></asp:TextBox>
+                </div>
+             </div>
+             </br>     
+            <div class="row">
+                <div class="col-md">
+                    <asp:TextBox placeholder="City" runat="server" CssClass="input-group" ID="city"></asp:TextBox>
+                </div>
+                <div class="col-md">
+                    <asp:TextBox placeholder="Pin Code" runat="server" CssClass="input-group" TextMode="Number" ID="pin"></asp:TextBox>
+                </div>
+            </div>
+                    <br />  
+            <div class="row">
+                <div class="col-md">
+                    <asp:TextBox   placeholder="Password" runat="server" CssClass="input-group" TextMode="Password" ID="pass"></asp:TextBox>            
+                </div>
+                <div class="col-md">             
+                    <asp:TextBox   placeholder="Confirm Password" runat="server" CssClass="input-group" TextMode="Password" ID="cpass"></asp:TextBox>
+                </div> 
+                </div>
+                    <br />
+            <asp:Button CssClass="btn btn-info input-group" runat="server" Text="Register" Onclick="Register_Click"  />
             <br />
             <asp:Label ID="errormsg" runat="server" ForeColor="Red"></asp:Label><br />
-            <h2>Already Registered ? <a href="login.aspx">Login</a> </h2>
+            <h2 class="lead">Already Registered ? <a href="login.aspx">Login</a> </h2>
             <asp:Label runat="server" ID="successmsg"></asp:Label>
 
 
@@ -56,10 +116,24 @@
             
         </div>
     </main>
-    <footer>
-        <div class="footer">
+
+                </div>
+            </div>
         </div>
-    </footer>
-    </form>
+      </div>
+    </section>
+
+    <section class="p-2 bg-dark text-white text-center position-relative">
+        <div class="container ">
+            <p class="lead text-start fs-3">Copyright &copy; 2021 LiveDesk </p>
+        </div>
+    </section>
+    
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   </form>
 </body>
 </html>

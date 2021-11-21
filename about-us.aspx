@@ -1,23 +1,25 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="ComplaintManagement.index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="about-us.aspx.cs" Inherits="ComplaintManagement.about_us" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="css/main.css">
-    <title>Home</title>
+    <title>About Us</title>
 </head>
 <body>
     <form id="form1" runat="server">
-        <section>
+          <section>
         <nav class="navbar navbar-expand-md bg-dark navbar-dark  fixed-top btn " >
             <div class="container">
                 <a href="#" class="navbar-brand  fs-2">LiveDesk</a>
@@ -46,77 +48,7 @@
             </div>
         </nav>
     </section>
-    <section class="bg-info py-5" id="top">
-        <div class="container">
-            <div class="d-sm-flex text-sm-start align-items-center justify-content-between ">
-                <div>
-                    <h1>Handling customer complaints is easier now</h1>
-                    <p class="lead my-4 fw-"> Livedesk Is An Initiative By Government To Hear and Solve The Day To Day Problems Of the Common Man. Sign Up And Report Any Problem  That You Encounter  In Your Surrounding And Report It To The Related Department. </p>
-                    <button class="btn btn-lg mb-2 mb-md-5 btn-dark text-light  w-50  input-group"">Signup</button>
-                </div> 
-                <img src="img/collab1.svg" alt="" class="img-fluid w-50 d-none d-sm-block">
-            </div>  
-        </div>
-
-    </section>
-
-    <section class="p-3 bg-dark text-light mb-3">
-        <div class="container text-center p-5 pt-2 ">
-            <h3>Why you should  start with LiveDesk's complaint management system?</h3>
-        </div>
-    </section>
-
-    <section class="p-5">
-        <div class="container">
-            <div class="row text-center g-5">
-                <div class="col-md">
-                    <div class="card bg-dark text-light">
-                        <div class="card-body text-center">
-                            <div class="h1 mb-1">
-                            <i class="bi bi-laptop"></i>
-                            </div>
-                            <h3 class="card-title m-2">
-                            Virtual
-                            </h3>
-                            <p class="card-text py-5">
-                            LiveDesk provides a virtual space for smooth and effortless communication.It enables the user to file a complaint from anywhere and at any time.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="card bg-secondary text-light">
-                        <div class="card-body text-center">
-                            <div class="h1 mb-1">
-                                <i class="bi bi-speedometer2"></i>
-                            </div>
-                            <h3 class="card-title m-2">
-                            Quick
-                            </h3>
-                            <p class="card-text py-5">
-                            The Complaints are sorted by department and hence, resulting in dividing the workload and ensuring the complaint is resolved  quickly .
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="card bg-dark text-light">
-                        <div class="card-body text-center">
-                            <div class="h1 mb-1">
-                            <i class="bi bi-people"></i>
-                            </div>
-                            <h3 class="card-title m-2">
-                            User-Friendly
-                            </h3>
-                            <p class="card-text py-5">
-                            LiveDesk is easy to used software solution for admin as well as users, it has all the necessary functions and is very user-friendly.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+   
 
     <section class="p-5 " id="about-us">
         <div class="container">
@@ -189,13 +121,13 @@
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
     <script>
-    mapboxgl.accessToken = 'pk.eyJ1Ijoic2FoaWxkb25ncmUyMCIsImEiOiJja3c4NjZoZnMwY2t1MndsZjh2bnNlMTlsIn0.mywo8bbLvejNK6VVgXzLtA';
-    var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
-    center: [73.0140, 19.0691],
-    zoom: 18
-    });
+        mapboxgl.accessToken = 'pk.eyJ1Ijoic2FoaWxkb25ncmUyMCIsImEiOiJja3c4NjZoZnMwY2t1MndsZjh2bnNlMTlsIn0.mywo8bbLvejNK6VVgXzLtA';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [73.0140, 19.0691],
+            zoom: 18
+        });
     </script>
     </form>
 </body>

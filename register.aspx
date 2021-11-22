@@ -108,7 +108,7 @@
             <asp:Button CssClass="btn btn-info input-group" runat="server" Text="Register" Onclick="Register_Click"  />
             <br />
             <asp:Label ID="errormsg" runat="server" ForeColor="Red"></asp:Label><br />
-            <h2 class="lead">Already Registered ? <a href="login.aspx">Login</a> </h2>
+            <h2 class="lead">Already Registered ? <a href="user-login.aspx">Login</a> </h2>
             <asp:Label runat="server" ID="successmsg"></asp:Label>
 
 

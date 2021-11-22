@@ -33,15 +33,6 @@ namespace ComplaintManagement
         protected global::System.Web.UI.WebControls.Label lbl_user_name;
 
         /// <summary>
-        /// hfuserid control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hfuserid;
-
-        /// <summary>
         /// title control.
         /// </summary>
         /// <remarks>
@@ -103,5 +94,14 @@ namespace ComplaintManagement
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload imgUpload;
+
+        /// <summary>
+        /// hfuserid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfuserid;
     }
 }

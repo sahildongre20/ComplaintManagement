@@ -56,7 +56,14 @@
            
             <div class="col-md p-5">
                 <div class="card shadow p-3 mb-5 bg-body rounded">
+                    <div class="login-box p-3  g-5 ">
+            <h2> Admin Login</h2>
+            <asp:TextBox  CssClass="input-group mt-5"  placeholder="Enter Username" runat="server"></asp:TextBox><br>
+            <asp:TextBox  CssClass="input-group my-3"  placeholder="Enter Password" runat="server" TextMode="Password"></asp:TextBox>
+            <asp:Button  CssClass="btn btn-info input-group my-3" runat="server" Text="Login"    />
+            <h2 class="lead">Not Registered ? <a href="register.aspx">Register</a> </h2>
 
+        </div>
                 </div>
             </div>
         </div>

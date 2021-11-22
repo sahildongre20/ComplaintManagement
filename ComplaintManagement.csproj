@@ -152,6 +152,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about-us.aspx" />
+    <Content Include="admin-dashboard.aspx" />
+    <Content Include="admin-history.aspx" />
     <Content Include="admin-login.aspx" />
     <Content Include="css\main.css" />
     <Content Include="css\style.css" />
@@ -172,11 +174,11 @@
     <Content Include="img\why.svg" />
     <Content Include="index.aspx" />
     <Content Include="login-type.aspx" />
+    <Content Include="manage-complaint.aspx" />
     <Content Include="user-login.aspx" />
     <Content Include="register.aspx" />
     <Content Include="user-add-complaint.aspx" />
     <Content Include="user-dashboard.aspx" />
-    <Content Include="user-edit-profile.aspx" />
     <Content Include="user-history.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -187,6 +189,20 @@
     </Compile>
     <Compile Include="about-us.aspx.designer.cs">
       <DependentUpon>about-us.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-dashboard.aspx.cs">
+      <DependentUpon>admin-dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-dashboard.aspx.designer.cs">
+      <DependentUpon>admin-dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-history.aspx.cs">
+      <DependentUpon>admin-history.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-history.aspx.designer.cs">
+      <DependentUpon>admin-history.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin-login.aspx.cs">
       <DependentUpon>admin-login.aspx</DependentUpon>
@@ -208,6 +224,13 @@
     </Compile>
     <Compile Include="login-type.aspx.designer.cs">
       <DependentUpon>login-type.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-complaint.aspx.cs">
+      <DependentUpon>manage-complaint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-complaint.aspx.designer.cs">
+      <DependentUpon>manage-complaint.aspx</DependentUpon>
     </Compile>
     <Compile Include="user-login.aspx.cs">
       <DependentUpon>user-login.aspx</DependentUpon>
@@ -237,13 +260,6 @@
     </Compile>
     <Compile Include="user-dashboard.aspx.designer.cs">
       <DependentUpon>user-dashboard.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="user-edit-profile.aspx.cs">
-      <DependentUpon>user-edit-profile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="user-edit-profile.aspx.designer.cs">
-      <DependentUpon>user-edit-profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="user-history.aspx.cs">
       <DependentUpon>user-history.aspx</DependentUpon>

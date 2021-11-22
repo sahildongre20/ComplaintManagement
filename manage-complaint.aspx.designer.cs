@@ -11,7 +11,7 @@ namespace ComplaintManagement
 {
 
 
-    public partial class user_edit_profile
+    public partial class manage_complaint
     {
 
         /// <summary>

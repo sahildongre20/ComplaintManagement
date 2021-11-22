@@ -20,7 +20,7 @@ namespace ComplaintManagement
             string current_user = Session["logged_user"].ToString();
             string fname = "";
             string lname = "";
-           string id ="" ;
+            string id = "";
             string New = "0";
             string Ongoing = "0";
             string Rejected = "0";
@@ -41,7 +41,7 @@ namespace ComplaintManagement
                     while (oReader.Read())
                     {
 
-                       fname  = oReader["fname"].ToString();
+                        fname = oReader["fname"].ToString();
                         lname = oReader["lname"].ToString();
                         id = oReader["id"].ToString();
 
@@ -50,8 +50,8 @@ namespace ComplaintManagement
                     Session["user_id"] = id;
                 }
 
-                string getNewComplaints = "Select count(*) as newC from dbo.complaints where user_id = @id and status = 'new' "  ;
-                   
+                string getNewComplaints = "Select count(*) as newC from dbo.complaints where user_id = @id and status = 'new' ";
+
                 SqlCommand getNewCmd = new SqlCommand(getNewComplaints, myConnection);
                 getNewCmd.Parameters.AddWithValue("@id", id);
                 //getNewCmd.Parameters.AddWithValue("@status", "new");
@@ -61,8 +61,8 @@ namespace ComplaintManagement
                     while (oReader.Read())
                     {
 
-                        New = oReader["newC"].ToString();                        
-                       
+                        New = oReader["newC"].ToString();
+
 
 
                     }
@@ -73,7 +73,7 @@ namespace ComplaintManagement
 
                 //get ongoing complaints
 
-                string getOngoingComplaints = "Select count(*) as OngoingC from dbo.complaints where user_id ="+id +"and status = 'ongoing'";
+                string getOngoingComplaints = "Select count(*) as OngoingC from dbo.complaints where user_id =" + id + "and status = 'ongoing'";
 
                 SqlCommand getOngoingCmd = new SqlCommand(getOngoingComplaints, myConnection);
                 getOngoingCmd.Parameters.AddWithValue("@id", id);
@@ -84,9 +84,9 @@ namespace ComplaintManagement
                     while (oReader.Read())
                     {
 
-                      
+
                         Ongoing = oReader["OngoingC"].ToString();
-                      
+
 
                     }
 
@@ -95,20 +95,20 @@ namespace ComplaintManagement
 
 
                 //count rejected
-                string getRejectedComplaints = "Select count(*) as RejectedC from dbo.complaints where user_id =" +id +"and status = 'rejected'";
-                  
+                string getRejectedComplaints = "Select count(*) as RejectedC from dbo.complaints where user_id =" + id + "and status = 'rejected'";
+
 
                 SqlCommand getRejectedCmd = new SqlCommand(getRejectedComplaints, myConnection);
-               // getRejectedCmd.Parameters.AddWithValue("@id", id);
+                // getRejectedCmd.Parameters.AddWithValue("@id", id);
 
                 using (SqlDataReader oReader = getRejectedCmd.ExecuteReader())
                 {
                     while (oReader.Read())
                     {
 
-                       
+
                         Rejected = oReader["RejectedC"].ToString();
-                    
+
 
 
 
@@ -123,7 +123,7 @@ namespace ComplaintManagement
 
                 //count resolved          
                 string getResolvedComplaints = "Select count(*) as ResolvedC from dbo.complaints where user_id = @id and status = 'resolved'";
-                    
+
                 SqlCommand getResolvedCmd = new SqlCommand(getResolvedComplaints, myConnection);
                 getResolvedCmd.Parameters.AddWithValue("@id", id);
 
@@ -132,7 +132,7 @@ namespace ComplaintManagement
                     while (oReader.Read())
                     {
 
-                      
+
                         Resolved = oReader["ResolvedC"].ToString();
 
 
@@ -154,9 +154,9 @@ namespace ComplaintManagement
                     while (oReader.Read())
                     {
 
-                      
+
                         Total = oReader["TotalC"].ToString();
-                       
+
 
 
 
@@ -172,7 +172,7 @@ namespace ComplaintManagement
                 myConnection.Close();
             }
 
-          
+
 
 
 

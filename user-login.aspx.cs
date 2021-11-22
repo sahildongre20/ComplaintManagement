@@ -64,7 +64,7 @@ namespace ComplaintManagement
                 else
                 {
 
-                    errormsg.Text = "<p>Username or password Incorrect</p>";
+                    errormsg.Text = "<p></br></br>Username or password Incorrect</p>";
 
                     errormsg.Visible = true;
                 }

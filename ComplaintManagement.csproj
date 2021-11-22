@@ -152,6 +152,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about-us.aspx" />
+    <Content Include="root-dashboard.aspx" />
     <Content Include="admin-dashboard.aspx" />
     <Content Include="admin-history.aspx" />
     <Content Include="admin-login.aspx" />
@@ -165,9 +166,14 @@
     <Content Include="favicon\favicon-32x32.png" />
     <Content Include="favicon\favicon.ico" />
     <Content Include="img\a-login.svg" />
+    <Content Include="img\add-complaint.svg" />
+    <Content Include="img\cancel.png" />
     <Content Include="img\co-working.svg" />
     <Content Include="img\collab.svg" />
     <Content Include="img\collab1.svg" />
+    <Content Include="img\delete.png" />
+    <Content Include="img\edit%281%29.png" />
+    <Content Include="img\floppy-disk.png" />
     <Content Include="img\login.svg" />
     <Content Include="img\signup.svg" />
     <Content Include="img\u-a-login.svg" />
@@ -189,6 +195,13 @@
     </Compile>
     <Compile Include="about-us.aspx.designer.cs">
       <DependentUpon>about-us.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="root-dashboard.aspx.cs">
+      <DependentUpon>root-dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="root-dashboard.aspx.designer.cs">
+      <DependentUpon>root-dashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin-dashboard.aspx.cs">
       <DependentUpon>admin-dashboard.aspx</DependentUpon>

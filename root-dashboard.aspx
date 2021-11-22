@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="admin-dashboard.aspx.cs" Inherits="ComplaintManagement.admin_dashboard" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="root-dashboard.aspx.cs"  Inherits="ComplaintManagement.root_dashboard" %>
 
 <!DOCTYPE html>
 
@@ -166,22 +166,22 @@
                             </asp:Legend>
                         </Legends>
                         <Titles>
-                            <asp:Title BackColor="192, 192, 255" Font="Tahoma, 11.25pt" Name="Title1" Text="Complaints According to Status">
+                            <asp:Title BackColor="192, 192, 255" Font="Tahoma, 12pt" Name="Title1" Text="Complaints According to Status">
                             </asp:Title>
                         </Titles>
                     </asp:Chart>
 
                     <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:Complaint_dbConnectionString %>' SelectCommand="select count(*)  as total, status from complaints  
-where status = 'new' and department = @department group by status
+where status = 'new'  group by status
 union
 select count(*)  as total, status from complaints 
-where status = 'ongoing' and department = @department group by status
+where status = 'ongoing'  group by status
 union
 select count(*)  as total, status from complaints  
-where status = 'rejected' and department = @department group by status
+where status = 'rejected'  group by status
 union
 select count(*)  as total, status from complaints  
-where status = 'resolved' and  department = @department group by status">
+where status = 'resolved' group by status">
                         <SelectParameters>
                             <asp:SessionParameter SessionField="department" Name="department"></asp:SessionParameter>
                         </SelectParameters>
@@ -192,9 +192,9 @@ where status = 'resolved' and  department = @department group by status">
                 <div>
             <h3> ----- Chart</h3>
 
-                    <asp:Chart ID="Chart2" runat="server" DataSourceID="SqlDataSource1">
+                    <asp:Chart ID="Chart2" runat="server"  DataSourceID="SqlDataSource2">
                         <Series>
-                            <asp:Series Name="Series1" Legend="Legend1" XValueMember="status" YValueMembers="total"></asp:Series>
+                            <asp:Series Name="Series1" Legend="Legend1" XValueMember="department_name" YValueMembers="total"></asp:Series>
                         </Series>
                         <ChartAreas>
                             <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
@@ -203,11 +203,19 @@ where status = 'resolved' and  department = @department group by status">
                             <asp:Legend Name="Legend1">
                             </asp:Legend>
                         </Legends>
+                        <Titles>
+                            <asp:Title BackColor="192, 192, 255" Font="Tahoma, 12pt" Name="Title1" Text="Departmentwise Complaints">
+                            </asp:Title>
+                        </Titles>
                     </asp:Chart>
 
 
 
-          </div>
+
+
+
+          <asp:SqlDataSource runat="server" ID="SqlDataSource2" ConnectionString='<%$ ConnectionStrings:Complaint_dbConnectionString %>' SelectCommand="select count(*) as total , d.department_name  from complaints c join departments d on d.id = c.department  group by department_name"></asp:SqlDataSource>
+</div>
              
           
         </div>
@@ -219,4 +227,4 @@ where status = 'resolved' and  department = @department group by status">
         
            
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"/>

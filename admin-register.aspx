@@ -100,7 +100,7 @@
                 </div> 
                 </div>
                     <br />
-            <asp:Button CssClass="btn btn-info input-group" runat="server" Text="Register"  />
+            <asp:Button CssClass="btn btn-info input-group" runat="server" Text="Register" OnClick="Reg_Click"  />
             <br /><br />
             <asp:Label ID="errormsg" runat="server" ForeColor="Red"></asp:Label><br />
             <h2 class="lead">Already Registered ? <a href="user-login.aspx">Login</a> </h2>

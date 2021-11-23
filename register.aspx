@@ -75,6 +75,7 @@
             <div class="row">
                 <div class="col-md">
                     <asp:TextBox placeholder="Email" runat="server"  CssClass="input-group" TextMode="Email" ID="email"></asp:TextBox>  
+                    <asp:RegularExpressionValidator ID="regexEmailValid" runat="server" ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="email" ErrorMessage="Invalid Email Format"></asp:RegularExpressionValidator>
                 </div>
                 <div class="col-md">                
                     <asp:TextBox placeholder="Phone Number" runat="server" CssClass="input-group"  TextMode="Number" ID="mobile"></asp:TextBox>  

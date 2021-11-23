@@ -9,8 +9,17 @@ namespace ComplaintManagement
 {
     public partial class admin_register : System.Web.UI.Page
     {
+        String con = System.Configuration.ConfigurationManager.ConnectionStrings["Complaint_dbConnectionString"].ConnectionString;
+        String cEmail = "";
         protected void Page_Load(object sender, EventArgs e)
         {
+
+        }
+
+        protected void Reg_Click(object sender, EventArgs e)
+        {
+
+
 
         }
     }

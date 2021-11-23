@@ -41,6 +41,9 @@
                         <li class="nav-item">
                             <a href="about-us.aspx" class="nav-link">About Us</a>
                         </li>
+                         <li class="nav-item">
+                            <a href="admin-register.aspx" class="nav-link">Admin Registration</a>
+                        </li>
                         
                     </ul>
                 </div>
@@ -75,7 +78,7 @@
       </div>
     </section>
 
-    <section class="p-2 bg-dark text-white text-center position-relative">
+   <section class="p-2 bg-dark text-white  w-100 bottom-0 text-center ">
         <div class="container ">
             <p class="lead text-start fs-3">Copyright &copy; 2021 LiveDesk </p>
         </div>

@@ -58,7 +58,7 @@ namespace ComplaintManagement
         {
             if (!imgUpload.HasFile)
             {
-                
+                Response.Write("<script>alert('Image Field is Empty')</script>");
             }
             else
             {
@@ -90,7 +90,7 @@ namespace ComplaintManagement
 
 
                     add.ExecuteNonQuery();
-                    //  clr();
+                    clr();
                     //  errormsg.Visible = false;
                     // successmsg.Text = "success";
 
@@ -101,7 +101,10 @@ namespace ComplaintManagement
 
             }
         }
-
+        public void clr()
+        {
+            title.Text = pincode.Text= city.Text = description.Text = address.Text = " ";
+        }
 
 
        

@@ -16,6 +16,24 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="css/user-dashboard.css">
     <title> Admin Dashboard</title>
+     <style>
+        @media print{
+            body *{
+                visibility:hidden;            
+                }
+            .main{
+                margin-left:2vh;
+
+            }
+            .print-container{
+                 position:absolute;
+                top:0;
+            }
+            .print-container, .print-container *{  
+                visibility:visible;
+            }
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -149,10 +167,10 @@
           </div>
         </section>
 
-            <section class="row g-5">
-            <div class="container col-md shadow    rounded bg-body " style="height:100%;">
+            <section class="row g-5  print-container ">
+            <div class="container col-md shadow   rounded bg-body " style="height:100%;">
                 <div>
-            <h3> ----- Chart</h3>
+            <h3> Pie Chart</h3>
 
                     <asp:Chart ID="Chart1" runat="server" DataSourceId="SqlDataSource1">
                         <Series>
@@ -190,7 +208,7 @@ where status = 'resolved' group by status">
                     </div>
                 <div class="container col-md shadow  rounded bg-body ">
                 <div>
-            <h3> ----- Chart</h3>
+            <h3> Barplot Chart</h3>
 
                     <asp:Chart ID="Chart2" runat="server"  DataSourceID="SqlDataSource2">
                         <Series>
@@ -219,6 +237,9 @@ where status = 'resolved' group by status">
              
           
         </div>
+                <div class="row my-5">
+                <button class="btn btn-lg btn-dark text-light " onclick="window.print();">Print</button>
+          </div>
                 </section>
 
       </main>

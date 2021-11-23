@@ -40,6 +40,9 @@
                         <li class="nav-item">
                             <a href="about-us.aspx" class="nav-link">About Us</a>
                         </li>
+                         <li class="nav-item">
+                            <a href="admin-register.aspx" class="nav-link">Admin Registration</a>
+                        </li>
                         
                     </ul>
                 </div>
@@ -52,7 +55,7 @@
                 <div>
                     <h1>Handling customer complaints is easier now</h1>
                     <p class="lead my-4 fw-"> Livedesk Is An Initiative By Government To Hear and Solve The Day To Day Problems Of the Common Man. Sign Up And Report Any Problem  That You Encounter  In Your Surrounding And Report It To The Related Department. </p>
-                    <button class="btn btn-lg mb-2 mb-md-5 btn-dark text-light  w-50  input-group"">Signup</button>
+                   <a href="register.aspx" class="btn btn-lg mb-2 mb-md-5 btn-dark text-light  w-50  input-group"> Signup</></a>
                 </div> 
                 <img src="img/collab1.svg" alt="" class="img-fluid w-50 d-none d-sm-block">
             </div>  
@@ -173,12 +176,9 @@
         
     <section class="p-5">
     </section>
-    <section class="p-2 bg-dark text-white text-center position-relative">
+   <section class="p-2 bg-dark text-white  w-100 bottom-0 text-center ">
         <div class="container ">
             <p class="lead text-start fs-3">Copyright &copy; 2021 LiveDesk </p>
-
-        
-
         </div>
     </section>
 

@@ -152,6 +152,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about-us.aspx" />
+    <Content Include="admin-register.aspx" />
     <Content Include="root-dashboard.aspx" />
     <Content Include="admin-dashboard.aspx" />
     <Content Include="admin-history.aspx" />
@@ -195,6 +196,13 @@
     </Compile>
     <Compile Include="about-us.aspx.designer.cs">
       <DependentUpon>about-us.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin-register.aspx.cs">
+      <DependentUpon>admin-register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-register.aspx.designer.cs">
+      <DependentUpon>admin-register.aspx</DependentUpon>
     </Compile>
     <Compile Include="root-dashboard.aspx.cs">
       <DependentUpon>root-dashboard.aspx</DependentUpon>

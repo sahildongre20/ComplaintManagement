@@ -103,20 +103,117 @@
       </nav>
 </section>
         <main class="p-5">
-          <!--   <section class="p-3 mb-5 container shadow   rounded bg-dark text-light">
+          <section class="p-3 mb-5 container shadow   rounded bg-dark text-light">
           <div>
              <h2>Welcome <asp:Label runat="server" ID="lbl_user_name"></asp:Label></h2></div>
 
-        </section>-->
+        </section>
               <section class="p-3 mb-5 container shadow   rounded bg-body">
           <div>
             <h3>Resolved Complaints</h3>
+
+              
+              <asp:GridView ID="gvNewComplaints"  DataKeyNames="id" runat="server" AutoGenerateColumns="False" DataSourceID="sqlDataSource1"   >
+                  <Columns>
+                      <asp:BoundField ReadOnly="true" DataField="id" HeaderText="ID" SortExpression="ID"></asp:BoundField>
+                      <asp:BoundField DataField="title" HeaderText="title" SortExpression="title" ReadOnly="true"></asp:BoundField>
+                      <asp:BoundField DataField="department" HeaderText="department" SortExpression="department" ReadOnly="true"></asp:BoundField>
+                      <asp:BoundField DataField="description" HeaderText="description" SortExpression="description" ReadOnly="true"></asp:BoundField>
+                      <asp:BoundField DataField="address" HeaderText="address" SortExpression="address" ReadOnly="true"></asp:BoundField>
+                      <asp:BoundField DataField="city" HeaderText="city" SortExpression="city" ReadOnly="true"></asp:BoundField>
+                      <asp:BoundField DataField="pincode" HeaderText="pincode" SortExpression="pincode" ItemStyle-HorizontalAlign="Center" ReadOnly="true"></asp:BoundField>
+<asp:TemplateField >
+                        <ItemTemplate >
+                            <asp:Image  ID="Image1" runat="server"  Height="100px" Width="100px" ImageUrl='<%#"data:Image/png;base64,"+Convert.ToBase64String((byte[]) Eval("image")) %>' />
+                        </ItemTemplate>
+                    </asp:TemplateField>                    
+
+               <asp:BoundField DataField="status" HeaderText="Status" SortExpression="Status"></asp:BoundField>
+                        <asp:CommandField ButtonType="Image" 
+                          EditImageUrl="~/img/edit(1).png"  
+                          ControlStyle-Height="50px" 
+                          ControlStyle-Width="50px" 
+                            DeleteImageUrl="~/img/delete.png"
+                          ShowDeleteButton="true" UpdateImageUrl="~/img/floppy-disk.png" ShowCancelButton="true" CancelImageUrl="~/img/cancel.png"
+                             
+                           
+                           
+                          
+                          
+                          />
+
+                      
+                  </Columns>
+              </asp:GridView>
+
+
+              <asp:SqlDataSource runat="server" ID="SqlDataSource1"
+                  ConnectionString='<%$ ConnectionStrings:Complaint_dbConnectionString %>' 
+                  SelectCommand="SELECT [Id], [title], [department], [description], [address], [city], [pincode], [photo], [status], [image] FROM [complaints] WHERE ([department] = @department and status = 'resolved')"
+                  DeleteCommand="delete from  complaints where id = @id">
+                  <SelectParameters>
+                      <asp:SessionParameter SessionField="department" Name="department" Type="Int32"></asp:SessionParameter>
+                  </SelectParameters>
+                  <DeleteParameters>
+                     
+                      <asp:Parameter Name="id"></asp:Parameter>
+                  </DeleteParameters>
+              </asp:SqlDataSource>
 
           </div>
         </section>
         <section class="p-3 mb-5 container shadow   rounded bg-body">
           <div>
             <h3>Rejected Complaints</h3>
+
+
+              
+              <asp:GridView ID="GridView1"  DataKeyNames="id" runat="server" AutoGenerateColumns="False" DataSourceID="sqlDataSource2"   >
+                  <Columns>
+                      <asp:BoundField ReadOnly="true" DataField="id" HeaderText="ID" SortExpression="ID"></asp:BoundField>
+                      <asp:BoundField DataField="title" HeaderText="title" SortExpression="title" ReadOnly="true"></asp:BoundField>
+                      <asp:BoundField DataField="department" HeaderText="department" SortExpression="department" ReadOnly="true"></asp:BoundField>
+                      <asp:BoundField DataField="description" HeaderText="description" SortExpression="description" ReadOnly="true"></asp:BoundField>
+                      <asp:BoundField DataField="address" HeaderText="address" SortExpression="address" ReadOnly="true"></asp:BoundField>
+                      <asp:BoundField DataField="city" HeaderText="city" SortExpression="city" ReadOnly="true"></asp:BoundField>
+                      <asp:BoundField DataField="pincode" HeaderText="pincode" SortExpression="pincode" ItemStyle-HorizontalAlign="Center" ReadOnly="true"></asp:BoundField>
+<asp:TemplateField >
+                        <ItemTemplate >
+                            <asp:Image  ID="Image1" runat="server"  Height="100px" Width="100px" ImageUrl='<%#"data:Image/png;base64,"+Convert.ToBase64String((byte[]) Eval("image")) %>' />
+                        </ItemTemplate>
+                    </asp:TemplateField>                    
+
+               <asp:BoundField DataField="status" HeaderText="Status" SortExpression="Status"></asp:BoundField>
+                        <asp:CommandField ButtonType="Image" 
+                          EditImageUrl="~/img/edit(1).png"  
+                          ControlStyle-Height="50px" 
+                          ControlStyle-Width="50px" DeleteImageUrl="~/img/delete.png"
+                            
+                          ShowDeleteButton="true" UpdateImageUrl="~/img/floppy-disk.png" ShowCancelButton="true" CancelImageUrl="~/img/cancel.png"
+                             
+                           
+                           
+                          
+                          
+                          />
+
+                      
+                  </Columns>
+              </asp:GridView>
+
+
+              <asp:SqlDataSource runat="server" ID="SqlDataSource2"
+                  ConnectionString='<%$ ConnectionStrings:Complaint_dbConnectionString %>' 
+                  SelectCommand="SELECT [Id], [title], [department], [description], [address], [city], [pincode], [photo], [status], [image] FROM [complaints] WHERE ([department] = @department and status = 'rejected')"
+                  DeleteCommand="delete from  complaints where id = @id">
+                  <SelectParameters>
+                      <asp:SessionParameter SessionField="department" Name="department" Type="Int32"></asp:SessionParameter>
+                  </SelectParameters>
+                  <DeleteParameters>
+                    
+                      <asp:Parameter Name="id"></asp:Parameter>
+                  </DeleteParameters>
+              </asp:SqlDataSource>
 
           </div>
         </section>

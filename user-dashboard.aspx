@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="user-dashboard.aspx.cs" Inherits="ComplaintManagement.user_dashboard" %>
 
+<%@ Register Assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI.DataVisualization.Charting" TagPrefix="asp" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -11,10 +13,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png"/>
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png"/>
     <link rel="manifest" href="favicon/site.webmanifest"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
-    <link rel="stylesheet" href="css/user-dashboard.css">
+    <link rel="stylesheet" href="css/user-dashboard.css"/>
     <title>Dashboard</title>
     <!--<style>
         @media print{
@@ -199,10 +201,11 @@
               <!--  <button class="btn btn-lg btn-dark text-light " onclick="window.print();">Print</button>-->
         </section>
         <section class="p-3 mb-5 container shadow   rounded bg-body">
-          <div>
-            <h3>Ongoing Complaints</h3>
+            <div>
+                <h3>Ongoing Complaints</h3>
 
-          </div>
+              
+            </div>
         </section>
     
             

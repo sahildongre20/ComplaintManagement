@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace ComplaintManagement
 {
-    public partial class admin_dashboard : System.Web.UI.Page
+    public partial class root_dashboard : System.Web.UI.Page
     {
         String con = System.Configuration.ConfigurationManager.ConnectionStrings["Complaint_dbConnectionString"].ConnectionString;
 
@@ -232,7 +232,8 @@ namespace ComplaintManagement
 
 
 
-
+           
+          
             lbl_user_name.Text = department;
             lbl_new.Text = New;
             lbl_ongoing.Text = Ongoing;

@@ -55,6 +55,7 @@ namespace ComplaintManagement
                 if (id != null)
                 {
                     errormsg.Visible = false;
+                    Response.Write("<script>alert('<p>Succesfull login</p>')</script>");
                     successmsg.Text = "<p>Succesfull login</p>";
                     string current_user = username.Text;
                     Session["logged_user"] = current_user;
@@ -65,7 +66,7 @@ namespace ComplaintManagement
                 {
 
                     errormsg.Text = "<p></br></br>Username or password Incorrect</p>";
-
+                    /*Response.Write("<script>alert('Username or password Incorrect')</script>");*/
                     errormsg.Visible = true;
                 }
             }

@@ -16,6 +16,24 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="css/user-dashboard.css">
     <title>Dashboard</title>
+    <!--<style>
+        @media print{
+            body *{
+                visibility:hidden;            
+                }
+            .main{
+                margin-left:2vh;
+
+            }
+            .print-container{
+                 position:absolute;
+                top:0;
+            }
+            .print-container, .print-container *{  
+                visibility:visible;
+            }
+        }
+    </style>-->
 </head>
 <body>
     <form id="form1" runat="server">
@@ -109,7 +127,7 @@
              <h2>Welcome <asp:Label runat="server" ID="lbl_user_name"></asp:Label></h2></div>
 
         </section>
-                <section>
+                <section >
           <div>
             <div class="container shadow p-3 mb-5  rounded bg-body row">
               <div class="col-md">
@@ -151,7 +169,7 @@
       
         
            
-            <section class="p-3 mt-0 my-5 container shadow   rounded bg-body">
+            <section class="p-3 mt-0 my-5 container shadow print-container  rounded bg-body">
           <div>
             <h3>New Complaints</h3>
               <asp:GridView ID="GridView1"  class="table table-striped row" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="False">
@@ -178,6 +196,7 @@
             </asp:SqlDataSource>
 
           </div>
+              <!--  <button class="btn btn-lg btn-dark text-light " onclick="window.print();">Print</button>-->
         </section>
         <section class="p-3 mb-5 container shadow   rounded bg-body">
           <div>

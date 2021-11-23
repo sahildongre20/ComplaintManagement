@@ -188,7 +188,7 @@
                     </asp:TemplateField>
                 </Columns>
             </asp:GridView>
-            <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:Complaint_dbConnectionString %>' SelectCommand="SELECT [title], d.[department_name], [description], [address], [status] , [image] FROM  complaints c  join departments d  on d.id = c.department where user_id = @id" >
+            <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:Complaint_dbConnectionString %>' SelectCommand="SELECT [title], d.[department_name], [description], [address], [status] , [image] FROM  complaints c  join departments d  on d.id = c.department where user_id = @id and status='new'"  >
                 <SelectParameters>
             <asp:SessionParameter Name="id" SessionField="user_id" Type="String" />
 
@@ -203,6 +203,29 @@
         <section class="p-3 mb-5 container shadow   rounded bg-body">
             <div>
                 <h3>Ongoing Complaints</h3>
+
+                  <asp:GridView ID="GridView2"  class="table table-striped row" runat="server" DataSourceID="SqlDataSource2" AutoGenerateColumns="False">
+                <Columns >
+                    <asp:BoundField  DataField="title" HeaderText="title" SortExpression="title"></asp:BoundField>
+                    <asp:BoundField DataField="department_name" HeaderText="department" SortExpression="department"></asp:BoundField>
+                    <asp:BoundField DataField="description" HeaderText="description" SortExpression="description"></asp:BoundField>
+                    <asp:BoundField DataField="address" HeaderText="address" SortExpression="address"></asp:BoundField>
+                      <asp:BoundField DataField="status"     HeaderText="status" SortExpression="status"></asp:BoundField>
+                    <asp:TemplateField>
+                        <ItemTemplate>
+                            <asp:Image ID="Image1" runat="server"  Height="100px" Width="100px" ImageUrl='<%#"data:Image/png;base64,"+Convert.ToBase64String((byte[]) Eval("image")) %>' />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+            </asp:GridView>
+            <asp:SqlDataSource runat="server" ID="SqlDataSource2" ConnectionString='<%$ ConnectionStrings:Complaint_dbConnectionString %>' SelectCommand="SELECT [title], d.[department_name], [description], [address], [status] , [image] FROM  complaints c  join departments d  on d.id = c.department where user_id = @id and status = 'ongoing'" >
+                <SelectParameters>
+            <asp:SessionParameter Name="id" SessionField="user_id" Type="String" />
+
+
+</SelectParameters>
+
+            </asp:SqlDataSource>
 
               
             </div>

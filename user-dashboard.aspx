@@ -181,8 +181,8 @@
                     <asp:BoundField DataField="description" HeaderText="description" SortExpression="description"></asp:BoundField>
                     <asp:BoundField DataField="address" HeaderText="address" SortExpression="address"></asp:BoundField>
                       <asp:BoundField DataField="status"     HeaderText="status" SortExpression="status"></asp:BoundField>
-                    <asp:TemplateField>
-                        <ItemTemplate>
+                    <asp:TemplateField HeaderText="Image">
+                        <ItemTemplate >
                             <asp:Image ID="Image1" runat="server"  Height="100px" Width="100px" ImageUrl='<%#"data:Image/png;base64,"+Convert.ToBase64String((byte[]) Eval("image")) %>' />
                         </ItemTemplate>
                     </asp:TemplateField>
@@ -211,7 +211,7 @@
                     <asp:BoundField DataField="description" HeaderText="description" SortExpression="description"></asp:BoundField>
                     <asp:BoundField DataField="address" HeaderText="address" SortExpression="address"></asp:BoundField>
                       <asp:BoundField DataField="status"     HeaderText="status" SortExpression="status"></asp:BoundField>
-                    <asp:TemplateField>
+                    <asp:TemplateField HeaderText="Image">
                         <ItemTemplate>
                             <asp:Image ID="Image1" runat="server"  Height="100px" Width="100px" ImageUrl='<%#"data:Image/png;base64,"+Convert.ToBase64String((byte[]) Eval("image")) %>' />
                         </ItemTemplate>

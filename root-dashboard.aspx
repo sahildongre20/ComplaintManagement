@@ -29,8 +29,12 @@
                  position:absolute;
                 top:0;
             }
+            
             .print-container, .print-container *{  
                 visibility:visible;
+            }
+            .print-container .btn{
+                visibility:hidden;
             }
         }
     </style>
@@ -189,17 +193,17 @@
                         </Titles>
                     </asp:Chart>
 
-                    <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:Complaint_dbConnectionString %>' SelectCommand="select count(*)  as total, status from complaints  
-where status = 'new'  group by status
-union
-select count(*)  as total, status from complaints 
-where status = 'ongoing'  group by status
-union
-select count(*)  as total, status from complaints  
-where status = 'rejected'  group by status
-union
-select count(*)  as total, status from complaints  
-where status = 'resolved' group by status">
+          <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:Complaint_dbConnectionString %>' SelectCommand="select count(*)  as total, status from complaints  
+                where status = 'new'  group by status
+                union
+                select count(*)  as total, status from complaints 
+                where status = 'ongoing'  group by status
+                union
+                select count(*)  as total, status from complaints  
+                where status = 'rejected'  group by status
+                union
+                select count(*)  as total, status from complaints  
+                where status = 'resolved' group by status">
                         <SelectParameters>
                             <asp:SessionParameter SessionField="department" Name="department"></asp:SessionParameter>
                         </SelectParameters>

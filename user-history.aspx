@@ -125,7 +125,7 @@
                       <asp:BoundField DataField="address" HeaderText="address" SortExpression="address" ReadOnly="true"></asp:BoundField>
                       <asp:BoundField DataField="city" HeaderText="city" SortExpression="city" ReadOnly="true"></asp:BoundField>
                       <asp:BoundField DataField="pincode" HeaderText="pincode" SortExpression="pincode" ItemStyle-HorizontalAlign="Center" ReadOnly="true"></asp:BoundField>
-<asp:TemplateField >
+<asp:TemplateField HeaderText="Image">
                         <ItemTemplate >
                             <asp:Image  ID="Image1" runat="server"  Height="100px" Width="100px" ImageUrl='<%#"data:Image/png;base64,"+Convert.ToBase64String((byte[]) Eval("image")) %>' />
                         </ItemTemplate>
@@ -165,7 +165,7 @@
                       <asp:BoundField DataField="address" HeaderText="address" SortExpression="address" ReadOnly="true"></asp:BoundField>
                       <asp:BoundField DataField="city" HeaderText="city" SortExpression="city" ReadOnly="true"></asp:BoundField>
                       <asp:BoundField DataField="pincode" HeaderText="pincode" SortExpression="pincode" ItemStyle-HorizontalAlign="Center" ReadOnly="true"></asp:BoundField>
-<asp:TemplateField >
+<asp:TemplateField HeaderText="Image">
                         <ItemTemplate >
                             <asp:Image  ID="Image1" runat="server"  Height="100px" Width="100px" ImageUrl='<%#"data:Image/png;base64,"+Convert.ToBase64String((byte[]) Eval("image")) %>' />
                         </ItemTemplate>

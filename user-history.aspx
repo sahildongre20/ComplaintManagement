@@ -116,8 +116,9 @@
         <section class="p-3 mb-5 container shadow   rounded bg-body">
           <div>
             <h3>Resolved Complaints</h3>
-                  <asp:GridView ID="GridView2" class="table table-striped row"  DataKeyNames="id" runat="server" AutoGenerateColumns="False" DataSourceID="sqlDataSource1"   >
+                  <asp:GridView ID="GridView2" AllowSorting="true" AllowPaging="true" class="table table-striped row"  DataKeyNames="id" runat="server" AutoGenerateColumns="False" DataSourceID="sqlDataSource1"   >
                   <Columns>
+<<<<<<< HEAD
                       <asp:BoundField ReadOnly="true" DataField="id" HeaderText="ID" SortExpression="ID"></asp:BoundField>
                       <asp:BoundField DataField="title" HeaderText="title" SortExpression="title" ReadOnly="true"></asp:BoundField>
                       <asp:BoundField DataField="department" HeaderText="department" SortExpression="department" ReadOnly="true"></asp:BoundField>
@@ -126,12 +127,24 @@
                       <asp:BoundField DataField="city" HeaderText="city" SortExpression="city" ReadOnly="true"></asp:BoundField>
                       <asp:BoundField DataField="pincode" HeaderText="pincode" SortExpression="pincode" ItemStyle-HorizontalAlign="Center" ReadOnly="true"></asp:BoundField>
 <asp:TemplateField HeaderText="Image">
+=======
+                      <asp:BoundField ReadOnly="true" DataField="id" HeaderText="ID" ></asp:BoundField>
+                      <asp:BoundField DataField="title" HeaderText="title"  ReadOnly="true"></asp:BoundField>
+                      <asp:BoundField DataField="dept" HeaderText="department"  ReadOnly="true"></asp:BoundField>
+                      <asp:BoundField DataField="description" HeaderText="description"  ReadOnly="true"></asp:BoundField>
+                                            <asp:BoundField DataField="date"  DataFormatString="{0:MM/dd/yyyy}" HeaderText="Registered_On" SortExpression="date" ItemStyle-HorizontalAlign="Center" ReadOnly="true"></asp:BoundField>
+
+                      <asp:BoundField DataField="address" HeaderText="address"  ReadOnly="true"></asp:BoundField>
+                      <asp:BoundField DataField="city" HeaderText="city"  ReadOnly="true"></asp:BoundField>
+                      <asp:BoundField DataField="pincode" HeaderText="pincode"  ItemStyle-HorizontalAlign="Center" ReadOnly="true"></asp:BoundField>
+<asp:TemplateField >
+>>>>>>> 083a443eb4560d90885db7e786621507b53542b4
                         <ItemTemplate >
                             <asp:Image  ID="Image1" runat="server"  Height="100px" Width="100px" ImageUrl='<%#"data:Image/png;base64,"+Convert.ToBase64String((byte[]) Eval("image")) %>' />
                         </ItemTemplate>
                     </asp:TemplateField>                    
 
-               <asp:BoundField DataField="status" HeaderText="Status" SortExpression="Status"></asp:BoundField>
+               <asp:BoundField DataField="status" HeaderText="Status" ></asp:BoundField>
                        
 
                       
@@ -141,7 +154,7 @@
 
               <asp:SqlDataSource runat="server" ID="SqlDataSource1"
                   ConnectionString='<%$ ConnectionStrings:Complaint_dbConnectionString %>' 
-                  SelectCommand="SELECT [Id], [title], [department], [description], [address], [city], [pincode], [photo], [status], [image] FROM [complaints] WHERE user_id = @id and status = 'resolved' ">
+                  SelectCommand="SELECT c.[Id], [title], d.[department_name ] as dept, date_registered as date ,  [description], [address], [city], [pincode], [photo], [status], [image] FROM [complaints] c join departments d on d.id = c.department WHERE user_id = @id and status = 'resolved' ">
                 
                   <SelectParameters>
                       <asp:SessionParameter SessionField="user_id" Name="id" Type="Int32"></asp:SessionParameter>
@@ -156,8 +169,9 @@
           <div>
             <h3>Rejected Complaints</h3>
                 
-              <asp:GridView ID="GridView1" class="table table-striped row"  DataKeyNames="id" runat="server" AutoGenerateColumns="False" DataSourceID="sqlDataSource2"   >
+              <asp:GridView ID="GridView1" AllowSorting="true" AllowPaging="true" class="table table-striped row"  DataKeyNames="id" runat="server" AutoGenerateColumns="False" DataSourceID="sqlDataSource2"   >
                   <Columns>
+<<<<<<< HEAD
                       <asp:BoundField ReadOnly="true" DataField="id" HeaderText="ID" SortExpression="ID"></asp:BoundField>
                       <asp:BoundField DataField="title" HeaderText="title" SortExpression="title" ReadOnly="true"></asp:BoundField>
                       <asp:BoundField DataField="department" HeaderText="department" SortExpression="department" ReadOnly="true"></asp:BoundField>
@@ -166,12 +180,24 @@
                       <asp:BoundField DataField="city" HeaderText="city" SortExpression="city" ReadOnly="true"></asp:BoundField>
                       <asp:BoundField DataField="pincode" HeaderText="pincode" SortExpression="pincode" ItemStyle-HorizontalAlign="Center" ReadOnly="true"></asp:BoundField>
 <asp:TemplateField HeaderText="Image">
+=======
+                      <asp:BoundField ReadOnly="true" DataField="id" HeaderText="ID" ></asp:BoundField>
+                      <asp:BoundField DataField="title" HeaderText="title"  ReadOnly="true"></asp:BoundField>
+                      <asp:BoundField DataField="dept" HeaderText="department"  ReadOnly="true"></asp:BoundField>
+                      <asp:BoundField DataField="description" HeaderText="description"  ReadOnly="true"></asp:BoundField>
+                                            <asp:BoundField DataField="date"  DataFormatString="{0:MM/dd/yyyy}" HeaderText="Registered_On" SortExpression="date" ItemStyle-HorizontalAlign="Center" ReadOnly="true"></asp:BoundField>
+
+                      <asp:BoundField DataField="address" HeaderText="address" ReadOnly="true"></asp:BoundField>
+                      <asp:BoundField DataField="city" HeaderText="city"  ReadOnly="true"></asp:BoundField>
+                      <asp:BoundField DataField="pincode" HeaderText="pincode"  ItemStyle-HorizontalAlign="Center" ReadOnly="true"></asp:BoundField>
+<asp:TemplateField >
+>>>>>>> 083a443eb4560d90885db7e786621507b53542b4
                         <ItemTemplate >
                             <asp:Image  ID="Image1" runat="server"  Height="100px" Width="100px" ImageUrl='<%#"data:Image/png;base64,"+Convert.ToBase64String((byte[]) Eval("image")) %>' />
                         </ItemTemplate>
                     </asp:TemplateField>                    
 
-               <asp:BoundField DataField="status" HeaderText="Status" SortExpression="Status"></asp:BoundField>
+               <asp:BoundField DataField="status" HeaderText="Status" ></asp:BoundField>
                        
 
                       
@@ -181,7 +207,7 @@
 
               <asp:SqlDataSource runat="server" ID="SqlDataSource2"
                   ConnectionString='<%$ ConnectionStrings:Complaint_dbConnectionString %>' 
-                  SelectCommand="SELECT [Id], [title], [department], [description], [address], [city], [pincode], [photo], [status], [image] FROM [complaints] WHERE user_id = @id and status = 'rejected' ">
+                  SelectCommand="SELECT c.[Id], [title], date_registered as date,  d.[department_name] as dept, [description], [address], [city], [pincode], [photo], [status], [image] FROM [complaints] c join departments d on d.id = c.department WHERE user_id = @id and status = 'rejected' ">
                 
                   <SelectParameters>
                       <asp:SessionParameter SessionField="user_id" Name="id" Type="Int32"></asp:SessionParameter>

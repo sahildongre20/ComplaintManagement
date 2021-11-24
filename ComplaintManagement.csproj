@@ -152,6 +152,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about-us.aspx" />
+    <Content Include="root-manage-complaint.aspx" />
+    <Content Include="root-history.aspx" />
     <Content Include="admin-register.aspx" />
     <Content Include="root-dashboard.aspx" />
     <Content Include="admin-dashboard.aspx" />
@@ -196,6 +198,20 @@
     </Compile>
     <Compile Include="about-us.aspx.designer.cs">
       <DependentUpon>about-us.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="root-manage-complaint.aspx.cs">
+      <DependentUpon>root-manage-complaint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="root-manage-complaint.aspx.designer.cs">
+      <DependentUpon>root-manage-complaint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="root-history.aspx.cs">
+      <DependentUpon>root-history.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="root-history.aspx.designer.cs">
+      <DependentUpon>root-history.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin-register.aspx.cs">
       <DependentUpon>admin-register.aspx</DependentUpon>

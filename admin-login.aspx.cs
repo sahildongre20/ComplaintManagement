@@ -64,7 +64,7 @@ namespace ComplaintManagement
                     }
                     else
                     {
-                        Response.Redirect("https://localhost:44316/admin-dashboard.aspx");
+                        Response.Redirect("/admin-dashboard.aspx" , false);
 
                     }
 

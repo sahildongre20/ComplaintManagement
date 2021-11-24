@@ -122,7 +122,9 @@
                 <div class="row g-5">
                     <div class="col-sm">
             <asp:TextBox placeholder="Complaint title" CssClass="input-group" runat="server" ID="title" ></asp:TextBox>
-            </div>
+                         <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="title" Display="Dynamic" ErrorMessage="Title is required" ForeColor="Red"></asp:RequiredFieldValidator>
+
+                        </div>
                    <div class="col-sm">
        <asp:DropDownList ID="department" runat="server" > 
            
@@ -136,23 +138,37 @@
             <asp:ListItem Value="7">Food and Supply Department</asp:ListItem>  
 
         </asp:DropDownList>  
+                       
+           <asp:RequiredFieldValidator ID="rfvDDL" runat="server"
+                            ControlToValidate="department" 
+                            Display="Dynamic"
+                            ErrorMessage="Department  is required"
+                           
+                            ForeColor="Red"
+                             >
+</asp:RequiredFieldValidator>
             <br/><br /></div>
                     </div>
                 <div class="row g-5">
                     <div class="col-sm">
             <asp:TextBox placeholder="Complaint Description"  CssClass="input-group" runat="server" TextMode="MultiLine"  ID="description"></asp:TextBox>
+              <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ForeColor="Red" runat="server" ControlToValidate="description" Display="Dynamic" ErrorMessage="Description is required"></asp:RequiredFieldValidator>
         </div>
             <div  class="col-sm">
             <asp:TextBox placeholder="Address" runat="server" CssClass="input-group" TextMode="MultiLine" ID="address"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ForeColor="Red" runat="server" ControlToValidate="address" Display="Dynamic" ErrorMessage="Address is Required"></asp:RequiredFieldValidator>
             </div>
                     </div>
                 <br /><br /> 
                 <div class="row g-5">
                     <div class="col-sm">
             <asp:TextBox placeholder="City" runat="server"  ID="city"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ForeColor="Red" runat="server" ControlToValidate="city" Display="Dynamic" ErrorMessage="City is required"></asp:RequiredFieldValidator>
                         </div>
                     <div class="col-sm">
             <asp:TextBox placeholder="Pin Code" runat="server" TextMode="Number" ID="pincode" ></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="pincode" ForeColor="Red"  Display="Dynamic" ErrorMessage="Pincode is required"></asp:RequiredFieldValidator>
+                         <asp:RegularExpressionValidator Display = "Dynamic" ForeColor="Red" ControlToValidate = "pincode" ID="RegularExpressionValidator2" ValidationExpression = "^[\s\S]{8,}$" runat="server" ErrorMessage="please enter valid 6 digit pincode"></asp:RegularExpressionValidator>
             <br /><br />   </div>
                      <div class="col-sm">
             <asp:FileUpload ID="imgUpload" runat="server" ></asp:FileUpload>

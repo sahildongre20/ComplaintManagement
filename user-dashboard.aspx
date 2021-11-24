@@ -173,14 +173,16 @@
            
             <section class="p-3 mt-0 my-5 container shadow print-container  rounded bg-body">
           <div>
-            <h3>New Complaints</h3>
-              <asp:GridView ID="GridView1"  class="table table-striped row" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="False">
+            <h3>New Complaints</h3> 
+              <asp:GridView ID="GridView1"  AllowSorting="true" AllowPaging="true" class="table table-striped row" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="False">
                 <Columns >
-                    <asp:BoundField  DataField="title" HeaderText="title" SortExpression="title"></asp:BoundField>
-                    <asp:BoundField DataField="department_name" HeaderText="department" SortExpression="department"></asp:BoundField>
-                    <asp:BoundField DataField="description" HeaderText="description" SortExpression="description"></asp:BoundField>
-                    <asp:BoundField DataField="address" HeaderText="address" SortExpression="address"></asp:BoundField>
-                      <asp:BoundField DataField="status"     HeaderText="status" SortExpression="status"></asp:BoundField>
+                    <asp:BoundField  DataField="title" HeaderText="title" ></asp:BoundField>
+                    <asp:BoundField DataField="department_name" HeaderText="department"></asp:BoundField>
+                    <asp:BoundField DataField="description" HeaderText="description" ></asp:BoundField>
+                     <asp:BoundField DataField="date"  DataFormatString="{0:MM/dd/yyyy}" HeaderText="Registered_On" SortExpression="date" ItemStyle-HorizontalAlign="Center" ReadOnly="true"></asp:BoundField>
+
+                    <asp:BoundField DataField="address" HeaderText="address" ></asp:BoundField>
+                      <asp:BoundField DataField="status"     HeaderText="status"></asp:BoundField>
                     <asp:TemplateField>
                         <ItemTemplate>
                             <asp:Image ID="Image1" runat="server"  Height="100px" Width="100px" ImageUrl='<%#"data:Image/png;base64,"+Convert.ToBase64String((byte[]) Eval("image")) %>' />
@@ -188,7 +190,7 @@
                     </asp:TemplateField>
                 </Columns>
             </asp:GridView>
-            <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:Complaint_dbConnectionString %>' SelectCommand="SELECT [title], d.[department_name], [description], [address], [status] , [image] FROM  complaints c  join departments d  on d.id = c.department where user_id = @id and status='new'"  >
+            <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:Complaint_dbConnectionString %>' SelectCommand="SELECT [title], d.[department_name], date_registered as date ,  [description], [address], [status] , [image] FROM  complaints c  join departments d  on d.id = c.department where user_id = @id and status='new'"  >
                 <SelectParameters>
             <asp:SessionParameter Name="id" SessionField="user_id" Type="String" />
 
@@ -204,13 +206,15 @@
             <div>
                 <h3>Ongoing Complaints</h3>
 
-                  <asp:GridView ID="GridView2"  class="table table-striped row" runat="server" DataSourceID="SqlDataSource2" AutoGenerateColumns="False">
+                  <asp:GridView ID="GridView2" AllowSorting="true" AllowPaging="true"  class="table table-striped row" runat="server" DataSourceID="SqlDataSource2" AutoGenerateColumns="False">
                 <Columns >
-                    <asp:BoundField  DataField="title" HeaderText="title" SortExpression="title"></asp:BoundField>
-                    <asp:BoundField DataField="department_name" HeaderText="department" SortExpression="department"></asp:BoundField>
-                    <asp:BoundField DataField="description" HeaderText="description" SortExpression="description"></asp:BoundField>
-                    <asp:BoundField DataField="address" HeaderText="address" SortExpression="address"></asp:BoundField>
-                      <asp:BoundField DataField="status"     HeaderText="status" SortExpression="status"></asp:BoundField>
+                    <asp:BoundField  DataField="title" HeaderText="title" ></asp:BoundField>
+                    <asp:BoundField DataField="department_name" HeaderText="department" ></asp:BoundField>
+                    <asp:BoundField DataField="description" HeaderText="description" ></asp:BoundField>
+                                          <asp:BoundField DataField="date"  DataFormatString="{0:MM/dd/yyyy}" HeaderText="Registered_On" SortExpression="date" ItemStyle-HorizontalAlign="Center" ReadOnly="true"></asp:BoundField>
+
+                    <asp:BoundField DataField="address" HeaderText="address" ></asp:BoundField>
+                      <asp:BoundField DataField="status"     HeaderText="status" ></asp:BoundField>
                     <asp:TemplateField>
                         <ItemTemplate>
                             <asp:Image ID="Image1" runat="server"  Height="100px" Width="100px" ImageUrl='<%#"data:Image/png;base64,"+Convert.ToBase64String((byte[]) Eval("image")) %>' />
@@ -218,7 +222,7 @@
                     </asp:TemplateField>
                 </Columns>
             </asp:GridView>
-            <asp:SqlDataSource runat="server" ID="SqlDataSource2" ConnectionString='<%$ ConnectionStrings:Complaint_dbConnectionString %>' SelectCommand="SELECT [title], d.[department_name], [description], [address], [status] , [image] FROM  complaints c  join departments d  on d.id = c.department where user_id = @id and status = 'ongoing'" >
+            <asp:SqlDataSource runat="server" ID="SqlDataSource2" ConnectionString='<%$ ConnectionStrings:Complaint_dbConnectionString %>' SelectCommand="SELECT [title], d.[department_name], date_registered as date ,  [description], [address], [status] , [image] FROM  complaints c  join departments d  on d.id = c.department where user_id = @id and status = 'ongoing'" >
                 <SelectParameters>
             <asp:SessionParameter Name="id" SessionField="user_id" Type="String" />
 

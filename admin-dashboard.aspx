@@ -168,7 +168,7 @@
         </section>
 
             <section class="row g-5 print-container">
-            <div class="container col-md shadow    rounded bg-body " style="height:100%;">
+            <div class="container col-md shadow w-100    rounded bg-body " style="height:100%;">
                 <div>
             <h3> Pie Chart</h3>
 
@@ -184,7 +184,7 @@
                             </asp:Legend>
                         </Legends>
                         <Titles>
-                            <asp:Title BackColor="192, 192, 255" Font="Tahoma, 11.25pt" Name="Title1" Text="Complaints According to Status">
+                            <asp:Title BackColor="192, 192, 255" Font="Tahoma, 12pt" Name="Title1" Text="Complaints According to Status">
                             </asp:Title>
                         </Titles>
                     </asp:Chart>
@@ -206,7 +206,7 @@ where status = 'resolved' and  department = @department group by status">
                     </asp:SqlDataSource>
                 </div>
                     </div>
-                <div class="container col-md shadow  rounded bg-body ">
+                <div class="container col-md shadow w-100   rounded bg-body ">
                 <div>
             <h3> Barplot Chart</h3>
 
@@ -222,7 +222,7 @@ where status = 'resolved' and  department = @department group by status">
                             </asp:Legend>
                         </Legends>
                         <Titles>
-                            <asp:Title BackColor="224, 224, 224" Font="Tahoma, 12pt" Name="Title1" Text="Status vise complaints">
+                            <asp:Title BackColor="255, 192, 255" Font="Tahoma, 12pt" Name="Title1" Text="Status Wise Womplaints">
                             </asp:Title>
                         </Titles>
                     </asp:Chart>

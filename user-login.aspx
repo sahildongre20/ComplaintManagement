@@ -65,7 +65,7 @@
             <h2>Login</h2>
             <asp:TextBox ID="username" CssClass="input-group"  placeholder="Enter Username" runat="server"></asp:TextBox><br>
             <asp:TextBox ID="txtpass" CssClass="input-group"  placeholder="Enter Password" runat="server" TextMode="Password"></asp:TextBox>
-            <asp:Label ID="errormsg" runat="server" ForeColor="Red"></asp:Label><br>
+           <br /> <asp:Label ID="errormsg" runat="server" ForeColor="Red"></asp:Label><br/>
             <asp:Button ID="blogin" CssClass="btn btn-info input-group" runat="server" Text="Login" onclick="blogin_Click"   /><br><br>
             <asp:label ID="successmsg" runat="server"></asp:label>
             <h2 class="lead">Not Registered ? <a href="register.aspx">Register</a> </h2>

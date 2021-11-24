@@ -118,6 +118,16 @@
             <h3>Resolved Complaints</h3>
                   <asp:GridView ID="GridView2" AllowSorting="true" AllowPaging="true" class="table table-striped row"  DataKeyNames="id" runat="server" AutoGenerateColumns="False" DataSourceID="sqlDataSource1"   >
                   <Columns>
+<<<<<<< HEAD
+                      <asp:BoundField ReadOnly="true" DataField="id" HeaderText="ID" SortExpression="ID"></asp:BoundField>
+                      <asp:BoundField DataField="title" HeaderText="title" SortExpression="title" ReadOnly="true"></asp:BoundField>
+                      <asp:BoundField DataField="department" HeaderText="department" SortExpression="department" ReadOnly="true"></asp:BoundField>
+                      <asp:BoundField DataField="description" HeaderText="description" SortExpression="description" ReadOnly="true"></asp:BoundField>
+                      <asp:BoundField DataField="address" HeaderText="address" SortExpression="address" ReadOnly="true"></asp:BoundField>
+                      <asp:BoundField DataField="city" HeaderText="city" SortExpression="city" ReadOnly="true"></asp:BoundField>
+                      <asp:BoundField DataField="pincode" HeaderText="pincode" SortExpression="pincode" ItemStyle-HorizontalAlign="Center" ReadOnly="true"></asp:BoundField>
+<asp:TemplateField HeaderText="Image">
+=======
                       <asp:BoundField ReadOnly="true" DataField="id" HeaderText="ID" ></asp:BoundField>
                       <asp:BoundField DataField="title" HeaderText="title"  ReadOnly="true"></asp:BoundField>
                       <asp:BoundField DataField="dept" HeaderText="department"  ReadOnly="true"></asp:BoundField>
@@ -128,6 +138,7 @@
                       <asp:BoundField DataField="city" HeaderText="city"  ReadOnly="true"></asp:BoundField>
                       <asp:BoundField DataField="pincode" HeaderText="pincode"  ItemStyle-HorizontalAlign="Center" ReadOnly="true"></asp:BoundField>
 <asp:TemplateField >
+>>>>>>> 083a443eb4560d90885db7e786621507b53542b4
                         <ItemTemplate >
                             <asp:Image  ID="Image1" runat="server"  Height="100px" Width="100px" ImageUrl='<%#"data:Image/png;base64,"+Convert.ToBase64String((byte[]) Eval("image")) %>' />
                         </ItemTemplate>
@@ -160,6 +171,16 @@
                 
               <asp:GridView ID="GridView1" AllowSorting="true" AllowPaging="true" class="table table-striped row"  DataKeyNames="id" runat="server" AutoGenerateColumns="False" DataSourceID="sqlDataSource2"   >
                   <Columns>
+<<<<<<< HEAD
+                      <asp:BoundField ReadOnly="true" DataField="id" HeaderText="ID" SortExpression="ID"></asp:BoundField>
+                      <asp:BoundField DataField="title" HeaderText="title" SortExpression="title" ReadOnly="true"></asp:BoundField>
+                      <asp:BoundField DataField="department" HeaderText="department" SortExpression="department" ReadOnly="true"></asp:BoundField>
+                      <asp:BoundField DataField="description" HeaderText="description" SortExpression="description" ReadOnly="true"></asp:BoundField>
+                      <asp:BoundField DataField="address" HeaderText="address" SortExpression="address" ReadOnly="true"></asp:BoundField>
+                      <asp:BoundField DataField="city" HeaderText="city" SortExpression="city" ReadOnly="true"></asp:BoundField>
+                      <asp:BoundField DataField="pincode" HeaderText="pincode" SortExpression="pincode" ItemStyle-HorizontalAlign="Center" ReadOnly="true"></asp:BoundField>
+<asp:TemplateField HeaderText="Image">
+=======
                       <asp:BoundField ReadOnly="true" DataField="id" HeaderText="ID" ></asp:BoundField>
                       <asp:BoundField DataField="title" HeaderText="title"  ReadOnly="true"></asp:BoundField>
                       <asp:BoundField DataField="dept" HeaderText="department"  ReadOnly="true"></asp:BoundField>
@@ -170,6 +191,7 @@
                       <asp:BoundField DataField="city" HeaderText="city"  ReadOnly="true"></asp:BoundField>
                       <asp:BoundField DataField="pincode" HeaderText="pincode"  ItemStyle-HorizontalAlign="Center" ReadOnly="true"></asp:BoundField>
 <asp:TemplateField >
+>>>>>>> 083a443eb4560d90885db7e786621507b53542b4
                         <ItemTemplate >
                             <asp:Image  ID="Image1" runat="server"  Height="100px" Width="100px" ImageUrl='<%#"data:Image/png;base64,"+Convert.ToBase64String((byte[]) Eval("image")) %>' />
                         </ItemTemplate>

@@ -51,7 +51,6 @@ namespace ComplaintManagement
 
             lbl_user_name.Text = fname + " " + lname;
 
-
         }
 
         protected void Add_complaint(object sender, EventArgs e)
@@ -88,9 +87,16 @@ namespace ComplaintManagement
 
 
 
+                    try{
+                        add.ExecuteNonQuery();
+                    }
+                   catch (Exception ex)
+                    {
 
-                    add.ExecuteNonQuery();
-                    clr();
+                    }
+                    finally{
+                        clr();
+                    }
                     //  errormsg.Visible = false;
                     // successmsg.Text = "success";
 

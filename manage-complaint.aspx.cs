@@ -16,7 +16,7 @@ namespace ComplaintManagement
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            New_Gridview();
+         
             string current_user = Session["logged_user"].ToString();
             string departmentId = Session["department"].ToString();
             string department = "";
@@ -54,24 +54,9 @@ namespace ComplaintManagement
 
         }
 
-        void New_Gridview()
-        {
-            string departmentId = Session["department"].ToString();
-
-            DataTable complaints = new DataTable();
-            using (SqlConnection myConnection = new SqlConnection(con))
-            {
-                SqlDataAdapter sd = new SqlDataAdapter("SELECT[title], [department], [description], [address], [city], [pincode], [photo], [status], [image] FROM[complaints] where department = @dept  and status = 'new'", myConnection);
-                sd.SelectCommand.Parameters.AddWithValue("@dept", departmentId);
-                
-                sd.Fill(complaints);
-             // gvNewComplaints.DataSource = complaints;
-            //  gvNewComplaints.DataBind();
-
-            }
+       
 
         }
 
         
     }
-}

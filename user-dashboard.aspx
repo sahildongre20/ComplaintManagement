@@ -176,6 +176,15 @@
             <h3>New Complaints</h3> 
               <asp:GridView ID="GridView1"  AllowSorting="true" AllowPaging="true" class="table table-striped row" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="False">
                 <Columns >
+<<<<<<< HEAD
+                    <asp:BoundField  DataField="title" HeaderText="title" SortExpression="title"></asp:BoundField>
+                    <asp:BoundField DataField="department_name" HeaderText="department" SortExpression="department"></asp:BoundField>
+                    <asp:BoundField DataField="description" HeaderText="description" SortExpression="description"></asp:BoundField>
+                    <asp:BoundField DataField="address" HeaderText="address" SortExpression="address"></asp:BoundField>
+                      <asp:BoundField DataField="status"     HeaderText="status" SortExpression="status"></asp:BoundField>
+                    <asp:TemplateField HeaderText="Image">
+                        <ItemTemplate >
+=======
                     <asp:BoundField  DataField="title" HeaderText="title" ></asp:BoundField>
                     <asp:BoundField DataField="department_name" HeaderText="department"></asp:BoundField>
                     <asp:BoundField DataField="description" HeaderText="description" ></asp:BoundField>
@@ -185,6 +194,7 @@
                       <asp:BoundField DataField="status"     HeaderText="status"></asp:BoundField>
                     <asp:TemplateField>
                         <ItemTemplate>
+>>>>>>> 083a443eb4560d90885db7e786621507b53542b4
                             <asp:Image ID="Image1" runat="server"  Height="100px" Width="100px" ImageUrl='<%#"data:Image/png;base64,"+Convert.ToBase64String((byte[]) Eval("image")) %>' />
                         </ItemTemplate>
                     </asp:TemplateField>
@@ -208,6 +218,14 @@
 
                   <asp:GridView ID="GridView2" AllowSorting="true" AllowPaging="true"  class="table table-striped row" runat="server" DataSourceID="SqlDataSource2" AutoGenerateColumns="False">
                 <Columns >
+<<<<<<< HEAD
+                    <asp:BoundField  DataField="title" HeaderText="title" SortExpression="title"></asp:BoundField>
+                    <asp:BoundField DataField="department_name" HeaderText="department" SortExpression="department"></asp:BoundField>
+                    <asp:BoundField DataField="description" HeaderText="description" SortExpression="description"></asp:BoundField>
+                    <asp:BoundField DataField="address" HeaderText="address" SortExpression="address"></asp:BoundField>
+                      <asp:BoundField DataField="status"     HeaderText="status" SortExpression="status"></asp:BoundField>
+                    <asp:TemplateField HeaderText="Image">
+=======
                     <asp:BoundField  DataField="title" HeaderText="title" ></asp:BoundField>
                     <asp:BoundField DataField="department_name" HeaderText="department" ></asp:BoundField>
                     <asp:BoundField DataField="description" HeaderText="description" ></asp:BoundField>
@@ -216,6 +234,7 @@
                     <asp:BoundField DataField="address" HeaderText="address" ></asp:BoundField>
                       <asp:BoundField DataField="status"     HeaderText="status" ></asp:BoundField>
                     <asp:TemplateField>
+>>>>>>> 083a443eb4560d90885db7e786621507b53542b4
                         <ItemTemplate>
                             <asp:Image ID="Image1" runat="server"  Height="100px" Width="100px" ImageUrl='<%#"data:Image/png;base64,"+Convert.ToBase64String((byte[]) Eval("image")) %>' />
                         </ItemTemplate>

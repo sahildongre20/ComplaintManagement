@@ -168,7 +168,7 @@
                     <div class="col-sm">
             <asp:TextBox placeholder="Pin Code" runat="server" TextMode="Number" ID="pincode" ></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="pincode" ForeColor="Red"  Display="Dynamic" ErrorMessage="Pincode is required"></asp:RequiredFieldValidator>
-                         <asp:RegularExpressionValidator Display = "Dynamic" ForeColor="Red" ControlToValidate = "pincode" ID="RegularExpressionValidator2" ValidationExpression = "^[\s\S]{8,}$" runat="server" ErrorMessage="please enter valid 6 digit pincode"></asp:RegularExpressionValidator>
+                         <asp:RegularExpressionValidator Display = "Dynamic" ForeColor="Red" ControlToValidate = "pincode" ID="RegularExpressionValidator2" ValidationExpression = "^[\s\S]{6,}$" runat="server" ErrorMessage="please enter valid 6 digit pincode"></asp:RegularExpressionValidator>
             <br /><br />   </div>
                      <div class="col-sm">
             <asp:FileUpload ID="imgUpload" runat="server" ></asp:FileUpload>

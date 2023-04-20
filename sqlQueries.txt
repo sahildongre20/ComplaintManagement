@@ -1,0 +1,37 @@
+CREATE TABLE [dbo].[user_data]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY , 
+	[fname] varchar(50) NOT NULL , 
+	[lname] varchar(50) NOT NULL, 
+    [email] VARCHAR(150) NULL, 
+    [mobile] NUMERIC(10) NULL, 
+    [dob] DATE NULL, 
+    [addr] VARCHAR(250) NULL, 
+    [city] VARCHAR(50) NULL, 
+    [pin] NUMERIC(6) NULL, 
+    [pass] VARCHAR(50) NULL , 
+
+
+)
+
+
+//create procedure for db register
+
+CREATE PROC regUser
+    @Id    INT   ,       
+    @fname  VARCHAR(50) , 
+    @lname  VARCHAR(50) ,
+    @email  VARCHAR(150),
+    @mobile NUMERIC(10)  ,
+    @dob    DATE          ,
+    @addr   VARCHAR(250),
+    @city   VARCHAR(50) ,
+    @pin    NUMERIC(6)   ,
+    @pass   VARCHAR(50)
+    AS
+
+    if @id = 0
+    begin 
+    insert into dbo.user_data(fname , lname , email , mobile , dob , addr , city , pin , pass)
+    values(@fname , @lname , @email , @mobile , @dob , @addr , @city , @pin , @pass)
+    end
